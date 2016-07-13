@@ -12,8 +12,7 @@ app.get('/api/whoami',function(req, res) {
   var language = req.headers['accept-language'];
   var software = req.headers['user-agent'];
   var ipInfo = getIP(req);
-  // console.log(ipInfo);
-  // console.log(ip);
+
   software = software.match(/\((.*?)\)/)[1];
   language = language.substr(0,language.indexOf(','));
 
